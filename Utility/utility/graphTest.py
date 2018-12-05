@@ -23,7 +23,7 @@ class Test(unittest.TestCase):
     def test2ConnectedNodesReverse(self):
         run(["2 1", "2 1"], {'1': {'2': {}}, '2': {'1': {}}})
     
-    def test3SingledNodes(self):
+    def test3SingleNodes(self):
         run(["3 0"], {'1': {}, '2': {}, '3': {}})
     
     def test2ConnectedNodes1SingleNode(self):

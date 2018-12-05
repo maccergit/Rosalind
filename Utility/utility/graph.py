@@ -13,7 +13,7 @@ def processLines(lines):
     """
     # First line is number of vertices and edges, and is not handled by networkx module.
     v_count = [int(x.strip()) for x in lines[0].split()][0]
-    # Read the rest of the files (which is just edges) as a regular netwokx graph.
+    # Read the rest of the files (which is just edges) as a regular networkx graph.
     mygraph = nx.parse_edgelist(lines[1:])
     # See if any stand-alone nodes need to be added to the graph - we only need to compare vertex count, and can ignore the edge count.
     for node in (str(x) for x in xrange(1, v_count + 1)):
