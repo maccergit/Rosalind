@@ -17,25 +17,30 @@ Sample Output
  -1
  1 3
  
-Brute force - IN PROGESS
+Brute force - works, used to verify other approaches
 """
 
 def processData(inFileName):
     with open(inFileName) as datafile:
+        result = []
         datafile.readline()
-        data = [int(x) for x in datafile.readline().strip().split(" ")]
-        total = 0
-        for i in xrange(0, len(data) - 1):
-            total += len([x for x in data[i + 1:] if data[i] > x])
-        return str(total)
+        for line in datafile:
+            data = [int(x) for x in line.strip().split(" ")]
+            result1 = -1
+            result2 = -1
+            for index1 in xrange(len(data) // 2):
+                for index2 in xrange(index1, len(data)):
+                    if data[index1] == -data[index2]:
+                        result1 = index1 + 1
+                        result2 = index2 + 1
+            if result1 == -1:
+                result.append('-1')
+            else:
+                result.append(str(result1) + ' ' + str(result2))
+        return result
 
-with open('sample_results.txt', 'w') as resultsfile:
-    result = processData('sample.txt')
-    print result
-    resultsfile.write(str(result))
-'''
+assert processData('sample.txt') == ['-1', '2 4', '-1', '1 3']
+
 with open('results.txt', 'w') as resultsfile:
-    result = processData('rosalind_inv.txt')
-    print result
-    resultsfile.write(str(result))
-    '''
+    result = processData('rosalind_2sum.txt')
+    resultsfile.write('\n'.join(result))
