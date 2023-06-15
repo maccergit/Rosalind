@@ -22,6 +22,7 @@ Sample Output
 
 import collections
 
+
 def processData(inFileName):
     with open(inFileName) as datafile:
         # First line is number of vertices and edges - may not be obvious that we need this, but it's

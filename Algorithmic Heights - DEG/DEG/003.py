@@ -22,7 +22,8 @@ Sample Output
 Use the utility class to handle Rosalind formatted data.
 """
 
-import utility.graph as ut
+from utility import graph as ut
+
 
 def processData(inFileName):
     mygraph = ut.readRosalindEdgeFile(inFileName)
