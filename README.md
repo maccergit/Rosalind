@@ -3,7 +3,7 @@ Eclipse projects for Rosalind
 
 Rosalind is a platform for learning bioinformatics and programming through problem solving, and has a bias towards using Python to solve the problems (it includes a small Python course, and the utility libraries that are recommended are Python).  Since bioinformatics is text and graph oriented, it's a nice counterpoint to the numeric processing of Euler.  See http://rosalind.info for more info.
 
-This repo holds the Eclipse pydev projects I am using to explore Rosalind.
+This repo holds the Eclipse pydev projects I am using to explore Rosalind, along with getting more familiar with github and egit (git plugin for Eclipse).
 
 - Python Village
   These projects cover the "Python Village" introduction to Python, and are named according to the ID of each problem.  Not much of a tutorial - these are more like exercises to introduce Python concepts that need to be researched elsewhere, and then tested here.  Completing these problems demonstrates a familiarity with Python.
@@ -21,3 +21,6 @@ The actual problem solution code is contained within a "processData" function, w
 The solution includes a comment at the start, desribing the problem (usually copied from the problem on the Rosalind page - including examples).  Note the use of the UTF-8 encoding directive to allow special symbols to be included in the comments, as the problem statements often include math symbols.
 
 Note that INI1 is missing - it's a trivial problem that does not require coding.
+
+- Algorithmic Heights
+  The projects implement a number of algorithms.  The focus is on the algorithm, and not the Python code - but implementing these helps build facility in whatever language you are using, so they are a good way to build Python skills.  Since the problem/solution approach is the same as Python Village, the project structure is basically the same.
