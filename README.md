@@ -19,3 +19,5 @@ The datasets/results are done as files, because the problems provide the data as
 The actual problem solution code is contained within a "processData" function, which allows for a simple unit test to be done using the sample data and the sample result (included as an assertion in the code).  More sophisticated code can wrap calls with timing information or other metrics to be captured.
 
 The solution includes a comment at the start, desribing the problem (usually copied from the problem on the Rosalind page - including examples).  Note the use of the UTF-8 encoding directive to allow special symbols to be included in the comments, as the problem statements often include math symbols.
+
+Note that INI1 is missing - it's a trivial problem that does not require coding.
