@@ -31,9 +31,15 @@ def processData(inFileName, outFileName):
                 if count % 2 == 0:
                     resultsFile.write(text)
                 count += 1
+
+"""
+Personal observations : 
+- No unit test here - the result is not a simple string that can be tested with an assert.
+- Simple procedural approach - keep a line counter, and only write the even numbered lines back out.
+"""
     
 processData('sample.txt', 'sampleresults.txt')
 
 processData('rosalind_ini5_1_dataset.txt', 'results.txt')
 
-print 'done'
+print('done')

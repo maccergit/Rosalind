@@ -21,17 +21,21 @@ Sample Output
  And gallantly he chickened out
  Bravely talking to his feet
  He beat a very brave retreat
-
-more pythonic version
 """
 
 def processData(inFileName, outFileName):
     with open(outFileName, 'w') as resultsFile:
         with open(inFileName) as datafile:
             resultsFile.write(''.join(datafile.readlines()[1::2]))
+
+"""
+Personal observations : 
+- Read the entire file in all at once as a sequence of lines, slice the entire sequence with a skip over odd lines (note that 0th entry is line 1, which is odd), and then
+join them all together into a single string to write to results files (note that line endings are read in and kept at end of each line - no need to add them).
+"""
     
 processData('sample.txt', 'sampleresults.txt')
 
 processData('rosalind_ini5_1_dataset.txt', 'results.txt')
 
-print 'done'
+print('done')

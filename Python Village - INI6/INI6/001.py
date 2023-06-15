@@ -31,9 +31,15 @@ def processData(inFileName, outFileName):
                     words[word] = 1
         for word, count in words.items():
             resultsFile.write(word + ' ' + str(count) + '\n')
+
+"""
+Personal observations : 
+- Simple procedural approach - read words, adding them to dictionary with initial count of 1 if not already there, or adding to the count if they are - then iterate over the
+dictionary to produce the results.
+"""
     
 processData('sample.txt', 'sampleresults.txt')
 
 processData('rosalind_ini6_1_dataset.txt', 'results.txt')
 
-print 'done'
+print('done')

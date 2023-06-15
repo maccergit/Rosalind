@@ -11,18 +11,22 @@ Sample Dataset
 
 Sample Output
  7500
- 
-more pythonic approach, and skip evens - note use of bitwise 'or' to ensure starting on odd value
 """
 
 def processData(inFileName):
     with open(inFileName) as datafile:
         a, b = [int(x.strip()) for x in datafile.readline().split(" ")]
-        return sum(xrange(a | 1, b + 1, 2))
+        return sum(range(a | 1, b + 1, 2))
+
+"""
+Personal observations : 
+- Similar to first solution, but skips over even values.  Note use of bitwise 'or' to ensure starting on odd value.  Since only odd values are generated, no need to filter
+out even values, so no need for list comprehension that uses modulo operator.
+"""
     
 assert processData('sample.txt') == 7500
 
 with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_ini4_1_dataset.txt')
-    print result
+    print(result)
     resultsfile.write(str(result))

@@ -34,4 +34,4 @@ processData('sample.txt', 'sampleresults.txt')
 
 processData('rosalind_ini6_1_dataset.txt', 'results.txt')
 
-print 'done'
+print('done')
