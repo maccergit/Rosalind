@@ -30,7 +30,7 @@ def processData(inFileName):
         data = collections.Counter(' '.join(line.strip() for line in datafile).split(' '))
         counts = [data[key] for key in sorted(data)]
         if len(counts) < v_count:
-            for x in xrange(len(counts), v_count):
+            for x in range(len(counts), v_count):
                 counts.append(0)
         return ' '.join(str(x) for x in counts)
     
@@ -40,4 +40,4 @@ with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_deg_1_dataset.txt')
     resultsfile.write(str(result))
     
-print 'done'
+print('done')

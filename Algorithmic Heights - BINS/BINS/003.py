@@ -16,6 +16,8 @@ Sample Output
  4 1 -1 -1 4 2
 
 Roll our own binary search.
+
+TODO - this appears to be broken, as it does not match the results of the linear search
 """
 
 def readlineValues(infile):

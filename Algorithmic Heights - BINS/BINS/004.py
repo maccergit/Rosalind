@@ -16,6 +16,8 @@ Sample Output
  4 1 -1 -1 4 2
 
 Use Python's binary search
+
+TODO - this appears to be broken, as it does not match the results of the linear search
 """
 
 import bisect
@@ -41,7 +43,7 @@ def processData(inFileName):
 print(processData('sample.txt'))
 assert processData('sample.txt') == '4 1 -1 -1 4 2'
 
-with open('results_bin.txt', 'w') as resultsfile:
+with open('results_bin2.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
     resultsfile.write(str(result))
 

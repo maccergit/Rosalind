@@ -16,7 +16,7 @@ def processLines(lines):
     # Read the rest of the files (which is just edges) as a regular networkx graph.
     mygraph = nx.parse_edgelist(lines[1:])
     # See if any stand-alone nodes need to be added to the graph - we only need to compare vertex count, and can ignore the edge count.
-    for node in (str(x) for x in xrange(1, v_count + 1)):
+    for node in (str(x) for x in range(1, v_count + 1)):
         if node not in mygraph:
             mygraph.add_node(node)
     return mygraph

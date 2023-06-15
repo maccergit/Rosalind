@@ -32,7 +32,7 @@ def processData(inFileName):
         v_count = [int(x.strip()) for x in datafile.readline().split()][0]
         mygraph = nx.read_edgelist(datafile)
     if v_count > len(mygraph):
-        for x in xrange(len(mygraph), v_count):
+        for x in range(len(mygraph), v_count):
             mygraph.add_node(str(x + 1))
     return " ".join(str(x[1]) for x in sorted(list(mygraph.degree())))
     
@@ -42,4 +42,4 @@ with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_deg_1_dataset.txt')
     resultsfile.write(str(result))
     
-print 'done'
+print('done')
