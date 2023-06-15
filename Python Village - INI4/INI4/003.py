@@ -18,12 +18,12 @@ def processData(inFileName):
         a, b = [int(x.strip()) for x in datafile.readline().split(" ")]
         a |= 1
         b -= 1 - (b % 2)
-        return (a + b) * (b - a + 2) / 4
+        return int((a + b) * (b - a + 2) / 4)
 
 """
 Personal observations : 
 - Use math formula of (a + b)(b - a + 2) / 4 : Note use of bitwise 'or' to ensure starting on odd value - but it's not so easy to force the last index to be odd, so use
-modulo math.  No iteration.
+modulo math.  No iteration.  Note need to convert to int, as result would normally be float and include ".0" and not match expected format.
 """
     
 assert processData('sample.txt') == 7500
