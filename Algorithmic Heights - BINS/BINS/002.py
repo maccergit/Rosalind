@@ -43,4 +43,4 @@ with open('results_linear2.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')

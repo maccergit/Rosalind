@@ -29,7 +29,7 @@ def lookup(dataSorted, value):
             return 1
         else:
             return -1
-    current = len(dataSorted) / 2
+    current = int(len(dataSorted) / 2)
     if dataSorted[current] == value:
         return current + 1
     if dataSorted[current] < value:
@@ -54,11 +54,11 @@ def processData(inFileName):
         dataUnsorted = readlineValues(datafile)
         return ' '.join(str(lookup(dataSorted, x)) for x in dataUnsorted)
     
-print processData('sample.txt')
+print(processData('sample.txt'))
 assert processData('sample.txt') == '4 1 -1 -1 4 2'
 
 with open('results_bin.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')

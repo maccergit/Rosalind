@@ -38,11 +38,11 @@ def processData(inFileName):
         dataUnsorted = readlineValues(datafile)
         return ' '.join(str(lookup(dataSorted, x)) for x in dataUnsorted)
     
-print processData('sample.txt')
+print(processData('sample.txt'))
 assert processData('sample.txt') == '4 1 -1 -1 4 2'
 
 with open('results_bin.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')

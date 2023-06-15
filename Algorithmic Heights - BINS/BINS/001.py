@@ -22,7 +22,7 @@ def readlineValues(infile):
     return [x.strip() for x in infile.readline().split()]
 
 def lookup(dataSorted, value):
-    for x in xrange(1, len(dataSorted) + 1):
+    for x in range(1, len(dataSorted) + 1):
         if dataSorted[x - 1] == value:
             return x
     return -1
@@ -40,5 +40,5 @@ assert processData('sample.txt') == '4 1 -1 -1 4 2'
 
 with open('results_linear.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
-    print result
+    print(result)
     resultsfile.write(str(result))
