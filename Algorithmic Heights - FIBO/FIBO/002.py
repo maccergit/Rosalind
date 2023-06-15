@@ -13,18 +13,16 @@ Sample Output
  8
 """
 
+import math
+
 def fibb(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    n1 = 0
-    n2 = 1
-    current = 1
-    while current < n:
-        n1, n2 = n2, n1 + n2
-        current += 1
-    return n2
+    root5 = math.sqrt(5)
+    return int(((1 + root5) ** n - (1 - root5) ** n) / (root5 * (2 ** n)))
+
+"""
+Personal observations : 
+- Uses Binet's formula, instead of iteration, so is O(c)
+"""
 
 def processData(inFileName):
     with open(inFileName) as datafile:
