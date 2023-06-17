@@ -40,4 +40,4 @@ with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_mer_1_dataset.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')

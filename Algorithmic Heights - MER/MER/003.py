@@ -27,6 +27,11 @@ def processData(inFileName):
         datafile.readline()
         B = [int(x) for x in datafile.readline().strip().split(" ")]
         return " ".join(str(x) for x in sorted(A + B))
+
+"""
+Personal observations : 
+- Ewww!  Simple, but yuck!
+"""
     
 assert processData('sample.txt') == '-5 2 4 10 11 12 18'
 
@@ -38,4 +43,4 @@ with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_mer_1_dataset.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')

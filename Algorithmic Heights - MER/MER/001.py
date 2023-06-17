@@ -38,6 +38,12 @@ def processData(inFileName):
                         C.append(B.pop(0))
         return " ".join(str(x) for x in C)
     
+"""
+Personal observations : 
+- No need to recurse - simply appending to the result, and removing items from the arrays "in place" allows for a single pass without blowing out the call stack.
+- Because python lists are automatically variable size, we don't need the array lengths provided in the file - we just skip over them.
+"""
+    
 assert processData('sample.txt') == '-5 2 4 10 11 12 18'
 
 with open('results.txt', 'w') as resultsfile:
@@ -48,4 +54,4 @@ with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_mer_1_dataset.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')
