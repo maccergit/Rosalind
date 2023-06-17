@@ -26,7 +26,7 @@ def processData(inFileName):
         datafile.readline()
         data = [int(x) for x in datafile.readline().strip().split(" ")]
         total = 0
-        for i in xrange(0, len(data) - 1):
+        for i in range(0, len(data) - 1):
             total += len([x for x in data[i + 1:] if data[i] > x])
         return str(total)
     
@@ -39,5 +39,5 @@ assert processData('sample6.txt') == '216'
 
 with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_inv.txt')
-    print result
+    print(result)
     resultsfile.write(str(result))
