@@ -34,12 +34,18 @@ def merge(A, B):
 def sort(data):
     if len(data) == 1:
         return data
-    return merge(sort(data[:len(data) / 2]), sort(data[len(data) / 2:]))
+    midpoint = int(len(data) / 2)
+    return merge(sort(data[:midpoint]), sort(data[midpoint:]))
     
 def processData(inFileName):
     with open(inFileName) as datafile:
         datafile.readline()
         return " ".join(str(y) for y in sort([int(x) for x in datafile.readline().strip().split(" ")]))
+
+"""
+Personal observations : 
+- if python did not have a built in sort, this would be useful (along with merge) in a library.
+"""
     
 assert processData('sample.txt') == '-20 -18 1 4 4 17 19 20 20 35'
 
@@ -47,4 +53,4 @@ with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_ms.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')
