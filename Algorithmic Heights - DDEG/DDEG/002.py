@@ -19,7 +19,7 @@ Sample Output
 Use utility class to read Rosalind data to networkx graph, and then use that to compute results.
 """
 
-import utility.graph as ut
+import graph as ut
 
 def processData(inFileName):
     mygraph = ut.readRosalindEdgeFile(inFileName)
@@ -35,4 +35,4 @@ with open('results2.txt', 'w') as resultsfile:
     result = processData('rosalind_ddeg_2_dataset.txt')
     resultsfile.write(str(result))
 
-print 'done'
+print('done')

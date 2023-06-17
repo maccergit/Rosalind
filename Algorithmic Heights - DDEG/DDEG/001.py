@@ -24,7 +24,7 @@ def processData(inFileName):
         # first line has vertices and adges counts
         v_count = int(datafile.readline().strip().split(" ")[0])
         # build empty adjacency set for each node
-        adj_set = {node: {'dd': 0, 'degree': 0, 'adj': set()} for node in (str(x) for x in xrange(1, v_count + 1))}
+        adj_set = {node: {'dd': 0, 'degree': 0, 'adj': set()} for node in (str(x) for x in range(1, v_count + 1))}
         # populate the adjacency set from the datafile
         for line in datafile:
             v1, v2 = line.strip().split(" ")
@@ -48,4 +48,4 @@ with open('results2.txt', 'w') as resultsfile:
     result = processData('rosalind_ddeg_2_dataset.txt')
     resultsfile.write(str(result))
     
-print 'done'
+print('done')
