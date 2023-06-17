@@ -2,6 +2,11 @@
 import unittest
 import graph as g
 
+"""
+- Run a test to see if the Rosalind edge list format converts properly to networkx graph.
+- data : An iterator that represents each line in a Rosalind edge file.  First entry is [#vertices, #edges] - subsequent entries are edges [vertex1 vertex2].
+- expected : the expected networkx graph.
+"""
 def run(data, expected):
     actual = g.processLines(data).adj
     assert actual == expected, actual

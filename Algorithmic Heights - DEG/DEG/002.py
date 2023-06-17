@@ -35,6 +35,15 @@ def processData(inFileName):
         for x in range(len(mygraph), v_count):
             mygraph.add_node(str(x + 1))
     return " ".join(str(x[1]) for x in sorted(list(mygraph.degree())))
+
+"""
+Personal observations : 
+- networkx is probably overkill for this project, but is probably useful for more complex graph problems.  Most of the code is building the graph structure in memory - the
+actual computing of the degree list is a single call into the library.
+- Rosalind edge list file format differs slightly from networkx edge list file format - networkx does not support the first line with vertex count and edge count.  By
+reading the first line ourselves, we leave the file position in the correct place for networkx to read the rest of the file, and can then adjust the resulting graph to
+take into account any lone vertices.
+"""
     
 assert processData('sample.txt') == '2 4 2 2 2 2'
 

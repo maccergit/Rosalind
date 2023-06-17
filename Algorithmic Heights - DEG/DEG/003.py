@@ -28,6 +28,13 @@ import graph as ut
 def processData(inFileName):
     mygraph = ut.readRosalindEdgeFile(inFileName)
     return " ".join(str(x[1]) for x in sorted(list(mygraph.degree())))
+
+"""
+Personal observations : 
+- Getting PyDev to handle imports from other projects in the same workspace is a bit of a pain, but can be done.  Probably need to play with this more to get a better
+feel for how to manage namespaces so they do not pollute the global namespace so much (I would like to import "utility.graph", not just "graph".
+- The previous version that converted Rosalind formatted data was coplex enough to warrant separation into a utility modulw, making this version much cleaner.
+"""
     
 assert processData('sample.txt') == '2 4 2 2 2 2'
 

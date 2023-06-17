@@ -28,12 +28,25 @@ def processData(inFileName):
         # First line is number of vertices and edges - may not be obvious that we need this, but it's
         # how we know about any stand-alone nodes.  Without edges, they aren't in the edge list.
         v_count = [int(x.strip()) for x in datafile.readline().split()][0]
+        # Turn the edge list into a flat set of references vertices, then count each time each vertex appears
         data = collections.Counter(' '.join(line.strip() for line in datafile).split(' '))
+        # get just the counts (degrees) in sorted order
         counts = [data[key] for key in sorted(data)]
+        # add any vertices that are missing from the edge list.  Since they are not in the list, we don't know their id thus don't know their location in the sorted list,
+        # so we just tack them on the end as degree 0 (no edges).
         if len(counts) < v_count:
             for x in range(len(counts), v_count):
                 counts.append(0)
+        # glue them together into a nice string
         return ' '.join(str(x) for x in counts)
+
+"""
+Personal observations : 
+- With a simple graph that is minimal (no duplicate edges), each vertex appears once on each edge that has that vertex as an endpoint.  Thus, we only need to count the
+number of times the vertex appears in the edge list to get its degree.  Since the output is positional, we need to sort by vertex ID to get the correct output.
+- The special case of vertices with no edges (and thus not connected to the graph) is not mentioned in the discussion.  May not actually be a simple graph, and not be 
+necessary, but included for completeness.
+"""
     
 assert processData('sample.txt') == '2 4 2 2 2 2'
 
