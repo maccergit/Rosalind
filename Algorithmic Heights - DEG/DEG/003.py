@@ -22,7 +22,7 @@ Sample Output
 Use the utility class to handle Rosalind formatted data.
 """
 
-from utility import graph as ut
+import graph as ut
 
 
 def processData(inFileName):
