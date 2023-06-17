@@ -36,5 +36,5 @@ assert processData('sample.txt') == '5 7 -1 -1'
 
 with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_maj.txt')
-    print result
+    print(result)
     resultsfile.write(str(result))

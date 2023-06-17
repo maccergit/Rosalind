@@ -24,7 +24,7 @@ import collections
 def processData(inFileName):
     with open(inFileName) as datafile:
         k, n = (int(x) for x in datafile.readline().strip().split())
-        results = ['-1' for x in xrange(0, k)]
+        results = ['-1' for x in range(0, k)]
         current = 0
         for line in datafile:
             data = collections.Counter(line.strip().split())
@@ -33,10 +33,15 @@ def processData(inFileName):
                     results[current] = x
             current += 1
         return " ".join(results)
+
+"""
+Personal observations : 
+- brute force approach of counting all the values in the array, and then looking for the one (if any) that has a large enough count to be the majority.
+"""
     
 assert processData('sample.txt') == '5 7 -1 -1'
 
 with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_maj.txt')
-    print result
+    print(result)
     resultsfile.write(str(result))
