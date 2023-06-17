@@ -16,9 +16,12 @@ Sample Output
  2 4
  -1
  1 3
-
-Use python method to find index
+ 
+use itertools to generate permutations
+TODO : in progress
 """
+
+import itertools as tools
 
 def processData(inFileName):
     with open(inFileName) as datafile:
@@ -26,20 +29,14 @@ def processData(inFileName):
         datafile.readline()
         for line in datafile:
             data = [int(x) for x in line.strip().split(" ")]
-            result1 = -1
-            result2 = -1
-            for index1 in range(len(data) // 2):
-                try:
-                    index2 = data.index(-data[index1])
-                    result1 = index1 + 1
-                    result2 = index2 + 1
-                except ValueError:
-                    # not an error - we expect some values will not be found
-                    pass
-            if result1 == -1:
-                result.append('-1')
+            indexes = [(i1, i2) for (i1, i2) in tools.permutations(range(len(data)), 2) if i1 < i2]
+            sums = [data[i1] + data[i2] for (i1, i2) in indexes]
+            if 0 in sums:
+                i = sums.index(0)
+                result.append(" ".join(str(x + 1) for x in indexes[i]))
             else:
-                result.append(str(result1) + ' ' + str(result2))
+                result.append('-1')
+        print(result)
         return result
 
 assert processData('sample.txt') == ['-1', '2 4', '-1', '1 3']

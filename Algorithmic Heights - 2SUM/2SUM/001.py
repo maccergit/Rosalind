@@ -28,8 +28,8 @@ def processData(inFileName):
             data = [int(x) for x in line.strip().split(" ")]
             result1 = -1
             result2 = -1
-            for index1 in xrange(len(data) // 2):
-                for index2 in xrange(index1, len(data)):
+            for index1 in range(len(data) // 2):
+                for index2 in range(index1, len(data)):
                     if data[index1] == -data[index2]:
                         result1 = index1 + 1
                         result2 = index2 + 1

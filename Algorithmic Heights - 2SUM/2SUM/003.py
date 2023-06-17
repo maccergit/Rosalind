@@ -29,9 +29,9 @@ def processData(inFileName):
             data = [int(x) for x in line.strip().split(" ")]
             result1 = -1
             result2 = -1
-            for index1 in xrange(len(data) // 2):
+            for index1 in range(len(data) - 1):
                 try:
-                    index2 = data.index(-data[index1])
+                    index2 = data[index1:].index(-data[index1]) + index1
                     result1 = index1 + 1
                     result2 = index2 + 1
                 except ValueError:
@@ -45,6 +45,6 @@ def processData(inFileName):
 
 assert processData('sample.txt') == ['-1', '2 4', '-1', '1 3']
 
-with open('results.txt', 'w') as resultsfile:
+with open('results2.txt', 'w') as resultsfile:
     result = processData('rosalind_2sum.txt')
     resultsfile.write('\n'.join(result))
