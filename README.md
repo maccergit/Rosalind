@@ -6,7 +6,7 @@ Rosalind is a platform for learning bioinformatics and programming through probl
 This repo holds the Eclipse pydev projects I am using to explore Rosalind, along with getting more familiar with github and egit (git plugin for Eclipse).
 
 - Python Village
-  These projects cover the "Python Village" introduction to Python, and are named according to the ID of each problem.  Not much of a tutorial - these are more like exercises to introduce Python concepts that need to be researched elsewhere, and then tested here.  Completing these problems demonstrates a familiarity with Python.
+- These projects cover the "Python Village" introduction to Python, and are named according to the ID of each problem.  Not much of a tutorial - these are more like exercises to introduce Python concepts that need to be researched elsewhere, and then tested here.  Completing these problems demonstrates a familiarity with Python.
 
   The structure of each project includes :
   - sample.txt : A file that contains the provided sample data from the problem (usually a small, simple version used as an example), saved as a file that will match the actual problem data that will be downloaded from Rosalind.
@@ -23,4 +23,7 @@ The solution includes a comment at the start, desribing the problem (usually cop
 Note that INI1 is missing - it's a trivial problem that does not require coding.
 
 - Algorithmic Heights
-  The projects implement a number of algorithms.  The focus is on the algorithm, and not the Python code - but implementing these helps build facility in whatever language you are using, so they are a good way to build Python skills.  Since the problem/solution approach is the same as Python Village, the project structure is basically the same.
+- These projects implement a number of algorithms.  The focus is on the algorithm, and not the Python code - but implementing these helps build facility in whatever language you are using, so they are a good way to build Python skills.  Since the problem/solution approach is the same as Python Village, the project structure is basically the same.
+
+- Bioinformatics Stronghold
+- The "meat and potatoes" of the Rosalind site.  The focus is on using the algorithms and code skills learned elsewhere to solve bioinformatics problems.
