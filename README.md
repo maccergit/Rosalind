@@ -24,3 +24,6 @@ Note that INI1 is missing - it's a trivial problem that does not require coding.
 
 - Algorithmic Heights
 - These projects implement a number of algorithms.  The focus is on the algorithm, and not the Python code - but implementing these helps build facility in whatever language you are using, so they are a good way to build Python skills.  Since the problem/solution approach is the same as Python Village, the project structure is basically the same.
+
+- Bioinformatics Stronghold
+- The "meat and potatoes" of the Rosalind site.  The focus is on using the algorithms and code skills learned elsewhere to solve bioinformatics problems.
