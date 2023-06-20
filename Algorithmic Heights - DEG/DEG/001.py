@@ -30,15 +30,15 @@ def processData(inFileName):
         v_count = [int(x.strip()) for x in datafile.readline().split()][0]
         # Turn the edge list into a flat set of references vertices, then count each time each vertex appears
         data = collections.Counter(' '.join(line.strip() for line in datafile).split(' '))
-        # get just the counts (degrees) in sorted order
-        counts = [data[key] for key in sorted(data)]
-        # add any vertices that are missing from the edge list.  Since they are not in the list, we don't know their id thus don't know their location in the sorted list,
-        # so we just tack them on the end as degree 0 (no edges).
-        if len(counts) < v_count:
-            for x in range(len(counts), v_count):
-                counts.append(0)
-        # glue them together into a nice string
-        return ' '.join(str(x) for x in counts)
+    # get just the counts (degrees) in sorted order
+    counts = [data[key] for key in sorted(data)]
+    # add any vertices that are missing from the edge list.  Since they are not in the list, we don't know their id thus don't know their location in the sorted list,
+    # so we just tack them on the end as degree 0 (no edges).
+    if len(counts) < v_count:
+        for x in range(len(counts), v_count):
+            counts.append(0)
+    # glue them together into a nice string
+    return ' '.join(str(x) for x in counts)
 
 """
 Personal observations : 

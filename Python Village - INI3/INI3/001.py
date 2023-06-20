@@ -18,7 +18,7 @@ def processData(inFileName):
     with open(inFileName) as datafile:
         text = datafile.readline()
         indices = [int(x.strip()) for x in datafile.readline().split(" ")]
-        return text[indices[0]:indices[1] + 1] + ' ' + text[indices[2]:indices[3] + 1]
+    return text[indices[0]:indices[1] + 1] + ' ' + text[indices[2]:indices[3] + 1]
 
 """
 Personal observations : 

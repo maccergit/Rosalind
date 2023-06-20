@@ -25,18 +25,18 @@ def processData(inFileName):
         datafile.readline()
         B = [int(x) for x in datafile.readline().strip().split(" ")]
         C = []
-        while len(A) + len(B) > 0:
-            if len(B) == 0:
-                C.append(A.pop(0))
+    while len(A) + len(B) > 0:
+        if len(B) == 0:
+            C.append(A.pop(0))
+        else:
+            if len(A) == 0:
+                C.append(B.pop(0))
             else:
-                if len(A) == 0:
-                    C.append(B.pop(0))
+                if A[0] < B[0]:
+                    C.append(A.pop(0))
                 else:
-                    if A[0] < B[0]:
-                        C.append(A.pop(0))
-                    else:
-                        C.append(B.pop(0))
-        return " ".join(str(x) for x in C)
+                    C.append(B.pop(0))
+    return " ".join(str(x) for x in C)
     
 """
 Personal observations : 

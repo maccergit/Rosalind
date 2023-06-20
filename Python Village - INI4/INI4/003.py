@@ -16,9 +16,9 @@ Sample Output
 def processData(inFileName):
     with open(inFileName) as datafile:
         a, b = [int(x.strip()) for x in datafile.readline().split(" ")]
-        a |= 1
-        b -= 1 - (b % 2)
-        return int((a + b) * (b - a + 2) / 4)
+    a |= 1
+    b -= 1 - (b % 2)
+    return int((a + b) * (b - a + 2) / 4)
 
 """
 Personal observations : 

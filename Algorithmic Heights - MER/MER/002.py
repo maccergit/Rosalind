@@ -28,7 +28,7 @@ def processData(inFileName):
         A = [int(x) for x in datafile.readline().strip().split(" ")]
         datafile.readline()
         B = [int(x) for x in datafile.readline().strip().split(" ")]
-        return " ".join(str(x) for x in heapq.merge(A, B))
+    return " ".join(str(x) for x in heapq.merge(A, B))
     
 assert processData('sample.txt') == '-5 2 4 10 11 12 18'
 

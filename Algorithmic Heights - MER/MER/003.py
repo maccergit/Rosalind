@@ -26,7 +26,7 @@ def processData(inFileName):
         A = [int(x) for x in datafile.readline().strip().split(" ")]
         datafile.readline()
         B = [int(x) for x in datafile.readline().strip().split(" ")]
-        return " ".join(str(x) for x in sorted(A + B))
+    return " ".join(str(x) for x in sorted(A + B))
 
 """
 Personal observations : 

@@ -34,7 +34,7 @@ def processData(inFileName):
         datafile.readline()
         dataSorted = readlineValues(datafile)
         dataUnsorted = readlineValues(datafile)
-        return ' '.join(str(lookup(dataSorted, x)) for x in dataUnsorted)
+    return ' '.join(str(lookup(dataSorted, x)) for x in dataUnsorted)
     
 assert processData('sample.txt') == '4 1 -1 -1 4 2'
 

@@ -16,7 +16,7 @@ Sample Output
 def processData(inFileName):
     with open(inFileName) as datafile:
         data = datafile.readline().strip()
-        return(' '.join([str(data.count(x)) for x in 'ACGT']))
+    return(' '.join([str(data.count(x)) for x in 'ACGT']))
 
 """
 Personal observations : 

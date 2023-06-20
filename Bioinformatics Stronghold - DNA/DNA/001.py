@@ -18,7 +18,7 @@ def processData(inFileName):
         counts = {'A' : 0, 'C' : 0, 'G' : 0, 'T' : 0}
         for x in datafile.readline().strip():
             counts[x] += 1
-        return(' '.join([str(counts[x]) for x in 'ACGT']))
+    return(' '.join([str(counts[x]) for x in 'ACGT']))
 
 """
 Personal observations : 

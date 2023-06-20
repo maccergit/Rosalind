@@ -21,7 +21,7 @@ Roll our own adjacency set approach.
 
 def processData(inFileName):
     with open(inFileName) as datafile:
-        # first line has vertices and adges counts
+        # first line has vertices and edge counts
         v_count = int(datafile.readline().strip().split(" ")[0])
         # build empty adjacency set for each node
         adj_set = {node: {'dd': 0, 'degree': 0, 'adj': set()} for node in (str(x) for x in range(1, v_count + 1))}
@@ -30,13 +30,13 @@ def processData(inFileName):
             v1, v2 = line.strip().split(" ")
             adj_set[v1]['adj'].add(v2)
             adj_set[v2]['adj'].add(v1)
-        # compute 1st level degree for each node
-        for key in adj_set:
-            adj_set[key]['degree'] = len(adj_set[key]['adj'])
-        # compute 2nd level degree for each node
-        for key in adj_set:
-            adj_set[key]['dd'] = sum(adj_set[x]['degree'] for x in adj_set[key]['adj'])
-        return " ".join(str(adj_set[x]['dd']) for x in sorted(adj_set))
+    # compute 1st level degree for each node
+    for key in adj_set:
+        adj_set[key]['degree'] = len(adj_set[key]['adj'])
+    # compute 2nd level degree for each node
+    for key in adj_set:
+        adj_set[key]['dd'] = sum(adj_set[x]['degree'] for x in adj_set[key]['adj'])
+    return " ".join(str(adj_set[x]['dd']) for x in sorted(adj_set))
     
 assert processData('sample.txt') == '3 5 5 5 0'
 

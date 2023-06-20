@@ -16,7 +16,7 @@ Sample Output
 def processData(inFileName):
     with open(inFileName) as datafile:
         a, b = [int(x.strip()) for x in datafile.readline().split(" ")]
-        return sum(x for x in range(a, b + 1) if x % 2 != 0)
+    return sum(x for x in range(a, b + 1) if x % 2 != 0)
 
 """
 Personal observations : 

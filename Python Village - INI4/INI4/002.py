@@ -16,7 +16,7 @@ Sample Output
 def processData(inFileName):
     with open(inFileName) as datafile:
         a, b = [int(x.strip()) for x in datafile.readline().split(" ")]
-        return sum(range(a | 1, b + 1, 2))
+    return sum(range(a | 1, b + 1, 2))
 
 """
 Personal observations : 

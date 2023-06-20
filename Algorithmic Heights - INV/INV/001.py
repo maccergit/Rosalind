@@ -25,10 +25,10 @@ def processData(inFileName):
     with open(inFileName) as datafile:
         datafile.readline()
         data = [int(x) for x in datafile.readline().strip().split(" ")]
-        total = 0
-        for i in range(0, len(data) - 1):
-            total += len([x for x in data[i + 1:] if data[i] > x])
-        return str(total)
+    total = 0
+    for i in range(0, len(data) - 1):
+        total += len([x for x in data[i + 1:] if data[i] > x])
+    return str(total)
     
 assert processData('sample.txt') == '2'
 assert processData('sample2.txt') == '8'

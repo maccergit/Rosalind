@@ -18,7 +18,7 @@ from collections import Counter
 def processData(inFileName):
     with open(inFileName) as datafile:
         counts = Counter(datafile.readline().strip())
-        return(' '.join([str(counts[x]) for x in 'ACGT']))
+    return(' '.join([str(counts[x]) for x in 'ACGT']))
 
 """
 Personal observations : 
