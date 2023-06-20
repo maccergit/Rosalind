@@ -27,3 +27,6 @@ Note that INI1 is missing - it's a trivial problem that does not require coding.
 
 - Bioinformatics Stronghold
 - The "meat and potatoes" of the Rosalind site.  The focus is on using the algorithms and code skills learned elsewhere to solve bioinformatics problems.
+
+- Bioinformatics Armory
+- Supplement to Bioinformatics Stronghold, showing the use of open source libraries to solve bioinformatics problems.
