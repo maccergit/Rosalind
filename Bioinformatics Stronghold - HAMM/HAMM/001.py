@@ -19,6 +19,12 @@ def processData(inFileName):
         s = datafile.readline().strip()
         t = datafile.readline().strip()
     return(str(len([1 for x in range(len(s)) if s[x] != t[x]])))
+
+"""
+Personal observations : 
+- Note that this definition of Hamming distance is slightly different from others.  For example, in SciPy, the Hamming distance is a percentage,
+where the value used here is divided by the length of the strings, to give the percentage of mismatched elements.
+"""
     
 assert processData('sample.txt') == '7'
 
