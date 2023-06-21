@@ -3,6 +3,7 @@
 	<name>Bioinformatics Stronghold - GC</name>
 	<comment></comment>
 	<projects>
+		<project>Utility</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
