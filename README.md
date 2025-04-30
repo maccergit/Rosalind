@@ -31,5 +31,5 @@ The "meat and potatoes" of the Rosalind site.  The focus is on using the algorit
 ## Bioinformatics Armory
 Supplement to Bioinformatics Stronghold, showing the use of open source libraries to solve bioinformatics problems.
 
-## Wiki
-Much of the discussion of the problems will be done in the associated wiki page for this project
+### Wiki
+This repo includes a Wiki with detailed documentation - to explore the Wiki, select the "Wiki" tab in the repo or follow this link : https://github.com/maccergit/Rosalind/wiki
