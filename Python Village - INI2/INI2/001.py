@@ -29,3 +29,6 @@ with open('results.txt', 'w') as resultsfile:
     result = processData('rosalind_ini2_1_dataset.txt')
     print(result)
     resultsfile.write(str(result))
+    
+# TODO - verify input data matches the constraints provided in the problem description - we should not be simply ignoring those
+# TODO - other simple error checking - empty file, non-numeric data, more than expected number of values.
