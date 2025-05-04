@@ -40,5 +40,4 @@ assert processData('sample.txt') == '4 1 -1 -1 4 2'
 
 with open('results_linear.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
-    print(result)
     resultsfile.write(str(result))
