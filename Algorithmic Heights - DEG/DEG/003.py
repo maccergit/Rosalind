@@ -22,7 +22,7 @@ Sample Output
 Use the utility class to handle Rosalind formatted data.
 """
 
-import graph as ut
+import utility.graph as ut
 
 def processData(inFileName):
     mygraph = ut.readRosalindEdgeFile(inFileName)
@@ -30,9 +30,11 @@ def processData(inFileName):
 
 """
 Personal observations : 
-- Getting PyDev to handle imports from other projects in the same workspace is a bit of a pain, but can be done.  Probably need to play with this more to get a better
-feel for how to manage namespaces so they do not pollute the global namespace so much (I would like to import "utility.graph", not just "graph".
-- The previous version that converted Rosalind formatted data was complex enough to warrant separation into a utility modulw, making this version much cleaner.
+- Getting PyDev to handle imports from other projects in the same workspace is a bit of a pain, but can be done.  To get the utility to load using the fully qualified
+name, had to add the the project folder as an external source library, and not as a project reference (project reference works - but then it acts like the module is in the
+current directory, and only the short name and not the fully qualified name works - this pollutes the global namespace).  Even with AI assistance, this took some trial and
+error.
+- The previous version that converted Rosalind formatted data was complex enough to warrant separation into a utility module, making this version much cleaner.
 """
     
 assert processData('sample.txt') == '2 4 2 2 2 2'

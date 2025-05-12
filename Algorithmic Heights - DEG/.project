@@ -3,7 +3,6 @@
 	<name>Algorithmic Heights - DEG</name>
 	<comment></comment>
 	<projects>
-		<project>Utility</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
