@@ -24,8 +24,6 @@ def readlineValues(infile):
     return [x.strip() for x in infile.readline().split()]
 
 def lookup(dataSorted, value):
-    if len(dataSorted) == 0:
-        return -1
     retval = bisect.bisect_left(dataSorted, value)
     if retval == len(dataSorted) :
         return -1
