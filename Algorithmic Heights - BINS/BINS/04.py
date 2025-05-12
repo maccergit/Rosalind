@@ -15,8 +15,10 @@ Sample Dataset
 Sample Output
  4 1 -1 -1 4 2
 
-Binary search - add simple cases that will be exit conditions of recursion
+Binary search - use python library
 """
+
+import bisect
 
 def readlineValues(infile):
     return [x.strip() for x in infile.readline().split()]
@@ -91,7 +93,7 @@ assert lookup([10, 20, 30, 40, 50, 60, 70, 80, 90], 90) == 8
 
 assert processParsedData([10, 20, 30, 40, 50, 60, 70, 80, 90], [85, 80, 10, 20, 30, 40, 50, 60, 70, 90]) == '-1 8 1 2 3 4 5 6 7 9'
 
-with open('results_binary.txt', 'w') as resultsfile:
+with open('results_binary2.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
     resultsfile.write(str(result))
     
