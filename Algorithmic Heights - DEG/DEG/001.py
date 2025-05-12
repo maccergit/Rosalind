@@ -28,7 +28,7 @@ def processData(inFileName):
         # First line is number of vertices and edges - may not be obvious that we need this, but it's
         # how we know about any stand-alone nodes.  Without edges, they aren't in the edge list.
         v_count = [int(x.strip()) for x in datafile.readline().split()][0]
-        # Turn the edge list into a flat set of references vertices, then count each time each vertex appears
+        # Turn the edge list into a flat set of referenced vertices, then count each time each vertex appears
         data = collections.Counter(' '.join(line.strip() for line in datafile).split(' '))
     # get just the counts (degrees) in sorted order
     counts = [data[key] for key in sorted(data)]
