@@ -15,7 +15,7 @@ Sample Dataset
 Sample Output
  4 1 -1 -1 4 2
 
-Binary search - add simple cases that will be exit conditions of recursion
+Binary search - hand-rolled with help of AI
 """
 
 def readlineValues(infile):
@@ -94,12 +94,4 @@ assert processParsedData([10, 20, 30, 40, 50, 60, 70, 80, 90], [85, 80, 10, 20, 
 with open('results_binary.txt', 'w') as resultsfile:
     result = processData('rosalind_bins_1_dataset.txt')
     resultsfile.write(str(result))
-    
-# TODO - wiki space needs to note the following : data needs to be converted to ints, because sring compare of ints is incorrect (show examples).
-# TODO - the 1-based indexing of Rosalind does not match the 0-based indexing of Python - easy approach is to do everything in 0-based indexing, and then
-# convert to 1-based indexing once we have the results.  Problem is this is easy to forget.
-# TODO - problem statement and sample data do not show any special requirements for handling duplicate data.  Binary search algorithm typically returns first found
-# index that satisfies the search - NOT the smallest index that satisfies the search (this makes it a tiny bit faster).  The accepted solution only works if we
-# assume it wants the smallest index that satisfies the binary search (which is what a linear search provides).
-# TODO - use "bisect_left" to do the binary search using a library
-# TODO - use hash lookup - does not care if indexed data is sorted, and can be used when passed unsorted data - binary search would require a sort step.
+
